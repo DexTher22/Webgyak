@@ -1,0 +1,40 @@
+// ===== VÁLTOZÓK =====
+$bg-color: #f8f9fa;
+$gradient-start: #6c63ff;
+$gradient-end: #ff6584;
+$header-padding: 40px;
+$card-img-height: 300px;
+
+// ===== ALAP =====
+body {
+  background-color: $bg-color;
+}
+
+// ===== HEADER =====
+.header {
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  color: white;
+  padding: $header-padding 0;
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+  }
+
+  .lead {
+    opacity: 0.9;
+  }
+}
+
+// ===== CARD =====
+.card {
+
+  img {
+    height: $card-img-height;
+    object-fit: cover;
+  }
+
+  .card-body {
+    max-width: 140px;
+  }
+}
