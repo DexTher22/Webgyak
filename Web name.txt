@@ -6,8 +6,7 @@ Web name:
 - Magyar Véleményem
 - Véleménytartalom
 
-+oldalak: - politika -Puzsér Róbert
-  - Pankotai Lili - 
++oldalak:
 oktató tartalom:
 - külön web felület
 - űrkutatás

@@ -25,7 +25,9 @@ body.viccesek-page {
   }
 
   .container {
-    margin-top: 60px;
+    margin-top: 60px auto 0 auto;
+    max-width: 1200px;          // ne legyen túl széles
+    padding: 0 15px;            // belső padding mobilhoz
   }
 
   .card {
@@ -34,6 +36,12 @@ body.viccesek-page {
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   // középre függőlegesen
+    padding: 15px;
 
     &:hover {
       transform: translateY(-8px) scale(1.03);
@@ -66,15 +74,7 @@ body.viccesek-page {
 
   footer {
     color: rgba(255,255,255,0.7);
-  }
-  .vicces-page .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between; /* vagy center, ha kell */
-      padding: 15px; /* kisebb, hogy ne lógjon ki */
-      border-radius: 15px;
-      background: #f8f9fa;
-      transition: 0.3s;
+    text-align: center; // középre
   }
 }
+
