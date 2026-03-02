@@ -1,3 +1,4 @@
+
 .dashboard.oktato-card {
   background-color: #f9f9f9;
   border-radius: 0.5rem;
@@ -7,42 +8,143 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
+}
 
-  .dropdown {
+// $note-bg: #fffa65;
+
+// .jegyzet-sidebar {
+//   position: fixed;
+//   top: 50%;               // középre
+//   left: 0;
+//   transform: translateY(-50%); // vertikális középre
+//   width: 260px;
+//   max-height: 90vh;       // ne legyen túl magas
+//   background: white;
+//   padding: 15px;
+//   box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+//   overflow-y: auto;
+//   z-index: 999;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;      // vízszintesen középre
+//   justify-content: flex-start; // ha a jegyzetek a tetejétől induljanak
+// }
+
+// body {
+//   padding-left: 260px; // hogy a tartalom ne menjen alá
+//   padding-right: 0;
+//   margin: 0;
+//   font-family: 'Segoe UI', sans-serif;
+// }
+
+// .note {
+//   background: $note-bg;
+//   padding: 10px;
+//   border-radius: 8px;
+//   position: relative;
+
+//   textarea {
+//     width: 100%;
+//     border: none;
+//     background: transparent;
+//     resize: none;
+//     outline: none;
+//     min-height: 50px;
+//     max-height: 33vh;
+//     overflow-y: hidden;
+//   }
+
+//   button.delete {
+//     position: absolute;
+//     top: 5px;
+//     right: 5px;
+//     background: red;
+//     color: white;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//   }
+// }
+
+// #notes-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+// }
+$note-bg: #fffa65;
+
+.jegyzet-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;           // teljes viewport magasság
+  background: white;
+  padding: 15px;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+
+  /* padding megtartása a scrollhoz */
+  box-sizing: border-box;
+}
+
+.jegyzet-sidebar h5 {
+  text-align: center;
+  margin-bottom: 10px;
+  flex-shrink: 0;          // ne zsugorodjon
+}
+
+#add-note {
+  width: 100%;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+/* Jegyzetek görgethető rész */
+#notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;        // görgethető, ha túl sok jegyzet
+  flex-grow: 1;            // kitölti a fennmaradó helyet
+  padding-bottom: 10px;    // alsó padding
+}
+
+.note {
+  background: $note-bg;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  width: 100%; 
+
+  textarea {
     width: 100%;
-
-    .dropdown-toggle {
-      width: 100%;
-      text-align: left;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      background-color: #e9ecef;
-      color: #333;
-      border: 1px solid #ced4da;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      &:after {
-        margin-left: 0.5rem;
-      }
-    }
-
-    .dropdown-menu {
-      width: 100%;
-      max-height: 200px;
-      overflow-y: auto;
-
-      a.dropdown-item {
-        padding: 0.5rem 1rem;
-        color: #212529;
-
-        &:hover {
-          background-color: #0d6efd;
-          color: #fff;
-        }
-      }
-    }
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    min-height: 50px;
+    max-height: none;      // engedjük nyúlni
+    overflow-y: auto;      // textarea görgethető legyen, ha hosszú
   }
+
+  button.delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+body {
+  padding-left: 260px; // hogy a tartalom ne menjen alá
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
