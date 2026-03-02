@@ -1,0 +1,48 @@
+.dashboard.oktato-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .dropdown {
+    width: 100%;
+
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+      background-color: #e9ecef;
+      color: #333;
+      border: 1px solid #ced4da;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+
+      a.dropdown-item {
+        padding: 0.5rem 1rem;
+        color: #212529;
+
+        &:hover {
+          background-color: #0d6efd;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

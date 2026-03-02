@@ -131,6 +131,48 @@ body.viccesek-page footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.dashboard.oktato-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.dashboard.oktato-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.dashboard.oktato-card .dropdown {
+  width: 100%;
+}
+.dashboard.oktato-card .dropdown .dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  background-color: #e9ecef;
+  color: #333;
+  border: 1px solid #ced4da;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard.oktato-card .dropdown .dropdown-toggle:after {
+  margin-left: 0.5rem;
+}
+.dashboard.oktato-card .dropdown .dropdown-menu {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.dashboard.oktato-card .dropdown .dropdown-menu a.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #212529;
+}
+.dashboard.oktato-card .dropdown .dropdown-menu a.dropdown-item:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
 .custom-btn {
   background-color: #d4edda !important; /* halványzöld kitöltés */
   border-color: #6c757d !important; /* marad a szürke keret */
