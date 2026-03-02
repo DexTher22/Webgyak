@@ -1,13 +1,13 @@
 
-<!-- 
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Dashboard</title>
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="bootstrap.css">
+  <link href="../style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../bootstrap.css">
 </head>
 <body class="bg-light">
 
@@ -28,53 +28,62 @@
 
     <div class="row">
 
-       Cat Memes 
+      <!-- Cat Memes -->
       <div class="col-md-4 mb-3">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Vicces Tartalom</h5>
-            <a href="html/vicces.html" class="btn btn-primary w-100">Megnyitás</a>
+            <a href="vicces.html" class="btn btn-primary w-100">Megnyitás</a>
           </div>
         </div>
       </div>
 
       
 
-       Oktatás 
-      <div class="col-md-4 mb-3">
-  <div class="card h-100">
+
+<div class="col-md-4 mb-3">
+  <div class="card h-100 shadow-sm oktato-card">
     <div class="card-body">
-      <h5 class="oktato">Oktató tartalom</h5>
-      <p>Aloldalak:</p>
-      
-      <a href="https://szit.hu/doku.php?id=start" 
+      <h5 class="card-title text-center mb-3">📚 Oktató tartalom</h5>
+      <p class="text-muted text-center">Hasznos tanulási oldalak</p>
+
+      <div class="d-grid gap-2">
+
+        <a href="https://szit.hu/doku.php?id=start" 
         class="btn btn-outline-secondary w-100 mb-1 custom-btn" 
         target="_blank" 
         rel="noopener">
-        SZIT weboldal
-      </a>
-      <a href="https://www.duolingo.com/learn" 
-      class="btn btn-outline-secondary w-100 mb-1 duolingo-btn" 
-      target="_blank" 
-      rel="noopener">
-      Duolingo
-      </a>
-      <a href="html/vilagjegy.html" 
-         class="btn btn-outline-secondary w-100 mb-1">
-         Világjegy
+        🌐 SZIT weboldal
       </a>
 
-      <a href="html/jolvanezigy.html" 
-         class="btn btn-outline-secondary w-100 mb-1">
-         Jólvanezígy
-      </a>
+        <a href="https://www.duolingo.com/learn"
+           class="btn btn-outline-success"
+           target="_blank"
+           rel="noopener">
+           🦉 Duolingo
+        </a>
+
+        <a href="https://leetcode.com/"
+           class="btn btn-outline-info"
+           target="_blank"
+           rel="noopener">
+           💻 LeetCode
+        </a>
+        <a href="https://github.com/oktat/tan"
+          class="btn btn-outline-dark"
+          target="_blank"
+          rel="noopener">
+          🐙 GitHub - oktat/tan
+        </a>
+        <hr>
+        
 
 
+      </div>
     </div>
   </div>
 </div>
-
-      extra 
+      <!-- extra -->
       <div class="col-md-4 mb-3">
         <div class="card h-100">
           <div class="card-body">
@@ -84,7 +93,7 @@
         </div>
       </div>
 
-       Top Gear 
+      <!-- Top Gear -->
       <div class="col-md-4 mb-3">
         <div class="card h-100">
           <div class="card-body">
@@ -96,35 +105,15 @@
           </div>
         </div>
       </div>
+      <button class="btn btn-success w-100 mb-2" onclick="addPage()">
+          ➕ Új oldal hozzáadása
+        </button>
+        <div id="custom-pages"></div>
 
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webgyak Explorer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
-</head>
-<body>
-
-    <div class="container">
-        <h1>📁 Webgyak Explorer</h1>
-
-        <div id="file-explorer">
-            <a href="html/meme-dash.html" class="file-card">
-                <div class="icon">📂</div>
-                <div class="file-name">Project01</div>
-            </a>
-        </div>
-    </div>
-
+  <script src="js/pages.js"></script>
 </body>
 </html>

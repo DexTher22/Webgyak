@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body.catmemes-page {
   background-color: #f4f6fb;
   font-family: "Segoe UI", sans-serif;
@@ -62,6 +63,15 @@ body.catmemes-page footer {
   font-size: 0.9rem;
   color: #6c757d;
 }
+body.catmemes-page .github-btn {
+  background-color: #24292e;
+  color: white;
+  border: none;
+}
+body.catmemes-page .github-btn:hover {
+  background-color: #000;
+  color: white;
+}
 
 body.viccesek-page {
   min-height: 100vh;
@@ -119,6 +129,104 @@ body.viccesek-page .btn-primary:hover {
 }
 body.viccesek-page footer {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-btn {
+  background-color: #d4edda !important; /* halványzöld kitöltés */
+  border-color: #6c757d !important; /* marad a szürke keret */
+  color: #212529 !important; /* szöveg szín */
+}
+
+.custom-btn:hover {
+  background-color: #c3e6cb !important; /* hover: kicsit sötétebb zöld */
+  border-color: #6c757d !important; /* keret marad szürke */
+}
+
+.duolingo-btn {
+  background-color: #58CC02 !important; /* madár színe */
+  border-color: #6c757d !important; /* szürke keret */
+  color: white !important; /* jól látható szöveg */
+}
+
+.duolingo-btn:hover {
+  background-color: #47A501 !important; /* kicsit sötétebb zöld hover-hez */
+  border-color: #6c757d !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#file-explorer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.file-card {
+  text-decoration: none;
+  background: #f8f9fc;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: #e2e6f5;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn[class*=btn-outline] {
+  transition: all 0.3s ease;
+}
+
+.btn[class*=btn-outline]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=style.css.map */
