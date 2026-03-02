@@ -173,6 +173,54 @@ body.viccesek-page footer {
   color: #fff;
 }
 
+.jegyzet {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#add-note {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.note {
+  background: #fffa65;
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.note textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  background: transparent;
+  resize: vertical;
+  font-family: inherit;
+  outline: none;
+}
+.note .delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
 .custom-btn {
   background-color: #d4edda !important; /* halványzöld kitöltés */
   border-color: #6c757d !important; /* marad a szürke keret */
