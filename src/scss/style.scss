@@ -164,3 +164,30 @@ h1 {
 .context-menu button:hover {
     background: #f1f1f1;
 }
+
+.file-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.file-card:hover {
+    background: #e9ecef;
+}
+
+.file-card.selected {
+    background: #0d6efd;
+    color: white;
+}
+
+.selected {
+  background: #0d6efd;
+  color: white;
+  border-radius: 5px;
+}
