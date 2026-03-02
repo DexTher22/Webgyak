@@ -1,0 +1,16 @@
+Web name: 
+- Magyar Véleményem
+- Véleménytartalom
+
++oldalak: - politika -Puzsér Róbert
+  - Pankotai Lili - 
+oktató tartalom:
+- külön web felület
+- űrkutatás
+- edzés tervek
+https://github.com/oktat/tan
+
+
+A vicces legyen szürke, a tanulás kedvéért
+
+
