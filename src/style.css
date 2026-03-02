@@ -130,6 +130,16 @@ body.viccesek-page .btn-primary:hover {
 body.viccesek-page footer {
   color: rgba(255, 255, 255, 0.7);
 }
+body.viccesek-page .vicces-page .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* vagy center, ha kell */
+  padding: 15px; /* kisebb, hogy ne lógjon ki */
+  border-radius: 15px;
+  background: #f8f9fa;
+  transition: 0.3s;
+}
 
 .dashboard.oktato-card {
   background-color: #f9f9f9;
@@ -173,43 +183,44 @@ body.viccesek-page footer {
   color: #fff;
 }
 
-.jegyzet {
-  max-width: 1000px;
-  margin: 40px auto;
-  text-align: center;
+.jegyzet-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: white;
+  padding: 15px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 999;
 }
 
-#add-note {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
+body {
+  padding-left: 260px;
+  padding-right: 0;
 }
 
 #notes-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .note {
   background: #fffa65;
-  width: 200px;
   padding: 10px;
   border-radius: 8px;
   position: relative;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 .note textarea {
   width: 100%;
-  height: 100px;
   border: none;
   background: transparent;
-  resize: vertical;
-  font-family: inherit;
+  resize: none;
   outline: none;
 }
-.note .delete {
+.note button.delete {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -218,7 +229,6 @@ body.viccesek-page footer {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  padding: 2px 6px;
 }
 
 .custom-btn {
@@ -248,9 +258,6 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #4e73df, #1cc88a);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
@@ -275,21 +282,28 @@ h1 {
 }
 
 .file-card {
-  text-decoration: none;
-  background: #f8f9fc;
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.3s;
-  color: #333;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .file-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  background: #e2e6f5;
+  background: #e9ecef;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.file-card.selected {
+  background: #0d6efd;
+  color: white;
 }
 
 .icon {
@@ -323,23 +337,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.file-card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  text-decoration: none;
-  color: black;
-  position: relative;
-  transition: 0.2s;
-}
-
-.file-card:hover {
-  background: #e9ecef;
 }
 
 .menu-btn {
@@ -385,27 +382,6 @@ h1 {
 
 .context-menu button:hover {
   background: #f1f1f1;
-}
-
-.file-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 8px;
-  transition: 0.2s;
-}
-
-.file-card:hover {
-  background: #e9ecef;
-}
-
-.file-card.selected {
-  background: #0d6efd;
-  color: white;
 }
 
 .selected {
