@@ -1,3 +1,7 @@
+$npm install, $npm start - browser-sync, 
+$npm run dev - sass+browser sync , 
+$npm run deploy - git push origin main -"deploy" committal - 
+
 Web name: 
 - Magyar Véleményem
 - Véleménytartalom
