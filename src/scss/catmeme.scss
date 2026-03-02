@@ -1,84 +1,94 @@
-// body {
-//   background-color: #f8f9fa;
-// }
+// ===============================
+// CAT MEMES OLDAL STÍLUS
+// Csak a catmemes.html-re érvényes
+// ===============================
 
-// .card img {
-//   height: 300px;
-//   object-fit: cover;
-// }
-
-// .header {
-//   background: linear-gradient(45deg, #6c63ff, #ff6584);
-//   color: white;
-//   padding: 40px 0;
-//   text-align: center;
-// }
-
-// .card-body {
-//   max-width: 140px;
-// }
-// ===== VÁLTOZÓK =====
-$bg-color: #f8f9fa;
-$card-radius: 16px;
-$card-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-$hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+$bg-color: #f4f6fb;
+$header-gradient: linear-gradient(45deg, #6c63ff, #ff6584);
+$card-radius: 18px;
+$card-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+$hover-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
 $transition-speed: 0.3s;
-$image-height: 220px;
 
-// ===== OLDAL HÁTTÉR =====
-body {
+body.catmemes-page {
   background-color: $bg-color;
-}
+  font-family: "Segoe UI", sans-serif;
 
-// ===== GRID SPACING FIX =====
-.row {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+  // ===== HEADER =====
+  .header {
+    background: $header-gradient;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
-// ===== CARD STÍLUS =====
-.card {
-  border: none;
-  border-radius: $card-radius;
-  overflow: hidden;
-  box-shadow: $card-shadow;
-  transition: transform $transition-speed ease,
-              box-shadow $transition-speed ease;
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: $hover-shadow;
-  }
-
-  img {
-    height: $image-height;
-    object-fit: cover;
-  }
-
-  .card-body {
-    padding: 1.2rem;
-
-    .card-title {
-      font-weight: 600;
+    p {
+      opacity: 0.9;
       font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-      color: #6c757d;
     }
   }
-}
 
-// ===== FOOTER =====
-footer {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
+  // ===== GRID TÁVOLSÁG =====
+  .row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
-@keyframes anim01 {
-  from{
-    transition: rotate(360);
+  // ===== CARD STÍLUS =====
+  .card {
+    border: none;
+    border-radius: $card-radius;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    transition: transform $transition-speed ease,
+                box-shadow $transition-speed ease;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: $hover-shadow;
+    }
+
+    img {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    // YouTube iframe fix
+    iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+      border-top-left-radius: $card-radius;
+      border-top-right-radius: $card-radius;
+    }
+
+    .card-body {
+      padding: 1.2rem;
+
+      .card-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+    }
+  }
+
+  // ===== FOOTER =====
+  footer {
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    color: #6c757d;
   }
 }
