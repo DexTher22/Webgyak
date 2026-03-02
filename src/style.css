@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body.catmemes-page {
   background-color: #f4f6fb;
   font-family: "Segoe UI", sans-serif;
@@ -131,26 +130,14 @@ body.viccesek-page footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.custom-btn {
-  background-color: #d4edda !important; /* halványzöld kitöltés */
-  border-color: #6c757d !important; /* marad a szürke keret */
-  color: #212529 !important; /* szöveg szín */
+.dashboard.oktato-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
 }
-
-.custom-btn:hover {
-  background-color: #c3e6cb !important; /* hover: kicsit sötétebb zöld */
-  border-color: #6c757d !important; /* keret marad szürke */
-}
-
-.duolingo-btn {
-  background-color: #58CC02 !important; /* madár színe */
-  border-color: #6c757d !important; /* szürke keret */
-  color: white !important; /* jól látható szöveg */
-}
-
-.duolingo-btn:hover {
-  background-color: #47A501 !important; /* kicsit sötétebb zöld hover-hez */
-  border-color: #6c757d !important;
+.dashboard.oktato-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -209,24 +196,6 @@ h1 {
 
 .file-name {
   font-weight: bold;
-}
-
-.custom-btn {
-  transition: all 0.3s ease;
-}
-
-.custom-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.btn[class*=btn-outline] {
-  transition: all 0.3s ease;
-}
-
-.btn[class*=btn-outline]:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 #file-explorer {
@@ -322,6 +291,24 @@ h1 {
   background: #0d6efd;
   color: white;
   border-radius: 5px;
+}
+
+.vicces-page .card,
+.catmemes-page .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background: #f8f9fa;
+  transition: 0.3s;
+}
+
+.vicces-page .card:hover,
+.catmemes-page .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  background: #e2e6f5;
 }
 
 /*# sourceMappingURL=style.css.map */

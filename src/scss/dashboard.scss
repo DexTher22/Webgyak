@@ -1,0 +1,26 @@
+// .custom-btn:hover {
+//     background-color: #c3e6cb !important; /* hover: kicsit sötétebb zöld */
+//     border-color: #6c757d !important;     /* keret marad szürke */
+// }
+
+// .duolingo-btn {
+//     background-color: #58CC02 !important; /* madár színe */
+//     border-color: #6c757d !important;     /* szürke keret */
+//     color: white !important;               /* jól látható szöveg */
+// }
+
+// .duolingo-btn:hover {
+//     background-color: #47A501 !important;  /* kicsit sötétebb zöld hover-hez */
+//     border-color: #6c757d !important;
+// }
+
+.dashboard.oktato-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+}
