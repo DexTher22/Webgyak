@@ -23,7 +23,7 @@ function loadPages() {
 }
 
 function displayPage(title, url) {
-    const container = document.getElementById("custom-pages");
+    const container = document.getElementById("customPages");
 
     const div = document.createElement("div");
     div.className = "d-grid gap-2 mb-2";
