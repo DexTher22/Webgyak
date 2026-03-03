@@ -5,6 +5,7 @@ $npm run deploy - git push origin main -"deploy" committal -
 Web name: 
 - Magyar Véleményem
 - Véleménytartalom
+- folder finder
 
 +oldalak:
 oktató tartalom:
